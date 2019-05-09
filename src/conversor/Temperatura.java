@@ -9,6 +9,6 @@ package conversor;
  *
  * @author DAM117
  */
-public class Kilometros {
+public class Temperatura {
     
 }
