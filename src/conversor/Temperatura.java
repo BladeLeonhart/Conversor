@@ -8,11 +8,12 @@ import java.util.Scanner;
  */
 public class Temperatura {
 
+    public Temperatura() {
+    }
+
     Scanner read = new Scanner(System.in);
 
-    public void ConversorTemperatura() {
-        int conver = 1;
-        double valor = 0;
+    public void ConversorTemperatura(int conver, double valor) {
 
         while (conver != 0) {
             System.out.println("Interfaz Temperatura\n "
@@ -30,30 +31,30 @@ public class Temperatura {
                 case 1:
                     System.out.println("Ingrese o valor a convertir: ");
                     valor = read.nextDouble();
-                    System.out.println(valor+" grados celsius son: ");
+                    System.out.println(valor + " grados celsius son: ");
                     valor = (valor * 9 / 5) + 32;
-                    System.out.println(valor+" grados fahrenheit.");
+                    System.out.println(valor + " grados fahrenheit.");
                     break;
                 case 2:
                     System.out.println("Ingrese o valor a convertir: ");
                     valor = read.nextDouble();
-                    System.out.println(valor+" grados fahrenheit son: ");
+                    System.out.println(valor + " grados fahrenheit son: ");
                     valor = (valor - 32) * 5 / 9;
-                    System.out.println(valor+" grados celsius");
+                    System.out.println(valor + " grados celsius");
                     break;
                 case 3:
                     System.out.println("Ingrese o valor a convertir: ");
                     valor = read.nextDouble();
-                    System.out.println(valor+" grados celsius son:");
+                    System.out.println(valor + " grados celsius son:");
                     valor = valor + 273.15;
-                    System.out.println(valor+" grados kelvin");
+                    System.out.println(valor + " grados kelvin");
                     break;
                 case 4:
                     System.out.println("Ingrese o valor a convertir: ");
                     valor = read.nextDouble();
-                    System.out.println(valor+" grados kelvin son:");
+                    System.out.println(valor + " grados kelvin son:");
                     valor = valor - 273.15;
-                    System.out.println(valor+" grados celsius");
+                    System.out.println(valor + " grados celsius");
                     break;
                 case 0:
                     break;
