@@ -6,6 +6,9 @@ public class Lonxitude {
     private double Km;
     private double Millas;
     private double Pulgadas;
+
+    public Lonxitude() {
+    }
     
     
     public String KilometrosMillas(double Km){
@@ -32,25 +35,7 @@ public class Lonxitude {
         return Pulgadas+"Son "+Millas;    
     }
     
-    
-    public void Mostrar(int num){ 
-        System.out.println("1. Transformar Kms a Millas\n"
-                + "2. Transformar Millas a Kms"
-                + "3. Transformar Millas a Pulgadas"
-                + "4. Transformar Pulgadas a Millas"
-                + "0. Volver ó menú anterior");
-        switch(num){
-            case 1: KilometrosMillas(Km);
-            break;
-            case 2: MillasKilometros(Millas);
-            break;
-            case 3: MillasPulgadas(Millas);
-            break;
-            case 4: PulgadasMillas(Pulgadas);
-            break;
-        }
-        System.out.println("Fin xD");
-    }
+ 
     
 }
 
