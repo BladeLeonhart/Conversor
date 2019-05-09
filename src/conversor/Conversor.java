@@ -42,22 +42,22 @@ public class Conversor {
                 switch (num) {
                     case 1:
                         System.out.println("Introduce valor");
-                        double Km=read.nextDouble();
+                        double Km = read.nextDouble();
                         Luis.KilometrosMillas(Km);
                         break;
                     case 2:
                         System.out.println("Introduce valor");
-                        double Millas=read.nextDouble();
+                        double Millas = read.nextDouble();
                         Luis.MillasKilometros(Millas);
                         break;
                     case 3:
                         System.out.println("Introduce valor");
-                        double Millas2=read.nextDouble();
+                        double Millas2 = read.nextDouble();
                         Luis.MillasPulgadas(Millas2);
                         break;
                     case 4:
                         System.out.println("Introduce valor");
-                        double Pulgadas=read.nextDouble();
+                        double Pulgadas = read.nextDouble();
                         Luis.PulgadasMillas(Pulgadas);
                         break;
                 }
