@@ -6,7 +6,7 @@ public class Potencia {
     private double CV;
     private double FtLB;
 
-    private void Conversion() {
+    private void Potenica() {
     }
 
     private void ConversionKWaCV(double KW) {
