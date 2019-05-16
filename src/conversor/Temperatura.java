@@ -13,52 +13,28 @@ public class Temperatura {
 
     Scanner read = new Scanner(System.in);
 
-    public void ConversorTemperatura(int conver, double valor) {
+    public void CelsiusaFahrenheit(double Celsius) {
+        double resultado;
+        resultado = (Celsius * 9 / 5) + 32;
+        System.out.println(Celsius + " ceslius son: " + resultado + " fahrenheit");
+    }
 
-        while (conver != 0) {
-            System.out.println("Interfaz Temperatura\n "
-                    + "1. Celsius a Fahrenheit\n"
-                    + "\n"
-                    + "2. Fahrenheit a Celsius\n"
-                    + "\n"
-                    + "3. Celsius a Kelvin\n"
-                    + "\n"
-                    + "4. Kelvin a Celsius\n"
-                    + "\n"
-                    + "0. Volver ó menú anterior");
-            conver = read.nextInt();
-            switch (conver) {
-                case 1:
-                    System.out.println("Ingrese o valor a convertir: ");
-                    valor = read.nextDouble();
-                    System.out.println(valor + " grados celsius son: ");
-                    valor = (valor * 9 / 5) + 32;
-                    System.out.println(valor + " grados fahrenheit.");
-                    break;
-                case 2:
-                    System.out.println("Ingrese o valor a convertir: ");
-                    valor = read.nextDouble();
-                    System.out.println(valor + " grados fahrenheit son: ");
-                    valor = (valor - 32) * 5 / 9;
-                    System.out.println(valor + " grados celsius");
-                    break;
-                case 3:
-                    System.out.println("Ingrese o valor a convertir: ");
-                    valor = read.nextDouble();
-                    System.out.println(valor + " grados celsius son:");
-                    valor = valor + 273.15;
-                    System.out.println(valor + " grados kelvin");
-                    break;
-                case 4:
-                    System.out.println("Ingrese o valor a convertir: ");
-                    valor = read.nextDouble();
-                    System.out.println(valor + " grados kelvin son:");
-                    valor = valor - 273.15;
-                    System.out.println(valor + " grados celsius");
-                    break;
-                case 0:
-                    break;
-            }
-        }
+    public void FahrenheitaCelsius(double Faren) {
+        double resultado;
+        resultado = (Faren - 32) * 5 / 9;
+        System.out.println(Faren + " fahrenheit son: " + resultado + " ceslius");
+
+    }
+
+    public void CelsiusaKelvin(double ndCelsius) {
+        double resultado;
+        resultado = ndCelsius + 273.15;
+        System.out.println(ndCelsius + " celsius son: " + resultado + " kelvin");
+    }
+
+    public void KelvinaCeslsius(double Kelvin) {
+        double resultado;
+        resultado = Kelvin - 273.15;
+        System.out.println(Kelvin + " kelvin son: " + resultado + " celsius");
     }
 }

@@ -9,29 +9,28 @@ public class Lonxitude {
     public double Millas;
     public double Pulgadas;
 
-    public String KilometrosMillas(double Km) {
-
+    public void KilometrosMillas(double Km) {
         double Millas;
         Millas = Km * 0.621;
-        return Km + "Son " + Millas;
+        System.out.println(Km + " Son " + Millas);
     }
 
-    public String MillasKilometros(double Millas) {
+    public void MillasKilometros(double Millas) {
         double Km;
         Km = Millas * 1.61;
-        return Millas + "Son " + Km;
+        System.out.println(Millas + " Son " + Km);
     }
 
-    public String MillasPulgadas(double Millas) {
+    public void MillasPulgadas(double Millas) {
         double Pulgadas;
         Pulgadas = Millas * 63360;
-        return Millas + "Son " + Pulgadas;
+        System.out.println(Millas + " Son " + Pulgadas);
     }
 
-    public String PulgadasMillas(double Pulgadas) {
+    public void PulgadasMillas(double Pulgadas) {
         double Millas;
         Millas = Pulgadas * 0.00001578;
-        return Pulgadas + "Son " + Millas;
+        System.out.println(Pulgadas + " Son " + Millas);
     }
 
 }

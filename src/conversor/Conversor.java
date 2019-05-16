@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package conversor;
 
 import java.util.Scanner;
@@ -18,63 +13,131 @@ public class Conversor {
     static Lonxitude Luis = new Lonxitude();
 
     public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
-        System.out.println("Interfaz principal:\n"
-                + "\n"
-                + "1. Transformar Lonxitude\n"
-                + "\n"
-                + "2. Transformar Potencia\n"
-                + "\n"
-                + "3. Transformar Temperatura\n"
-                + "\n"
-                + "0. Saír");
-        int interfaz = read.nextInt();
-        int output = -1;
+        Scanner leer = new Scanner(System.in);
+        int opc = 10;
+        Lonxitude Luis = new Lonxitude();
+        Potencia Pablo = new Potencia();
+        Temperatura Ivan = new Temperatura();
 
-        switch (interfaz) {
-            case 1:
-                System.out.println("1. Transformar Kms a Millas\n"
-                        + "2. Transformar Millas a Kms\n"
-                        + "3. Transformar Millas a Pulgadas\n"
-                        + "4. Transformar Pulgadas a Millas\n"
-                        + "0. Volver ó menú anterior\n");
-                int num = read.nextInt();
-                switch (num) {
-                    case 1:
-                        System.out.println("Introduce valor");
-                        double Km = read.nextDouble();
-                        Luis.KilometrosMillas(Km);
-                        break;
-                    case 2:
-                        System.out.println("Introduce valor");
-                        double Millas = read.nextDouble();
-                        Luis.MillasKilometros(Millas);
-                        break;
-                    case 3:
-                        System.out.println("Introduce valor");
-                        double Millas2 = read.nextDouble();
-                        Luis.MillasPulgadas(Millas2);
-                        break;
-                    case 4:
-                        System.out.println("Introduce valor");
-                        double Pulgadas = read.nextDouble();
-                        Luis.PulgadasMillas(Pulgadas);
-                        break;
-                }
-                break;
-            case 2:
-                System.out.println("A continuación le aparecerá las opciones a elegir");
-                System.out.println("1. KW a CV\n"
-                        + "2. CV a KW\n"
-                        + "3. KW a Ft/Lb\n"
-                        + "4. Ft/Lb a KW\n"
-                        + "0.Mover de Salir");
-                break;
-            case 3:
-                break;
-            case 0:
-                return;
-        }
+        do {
+            System.out.println("Ingrese la opción que desea:");
+
+            System.out.println("1 - Transformar Lonxitude.");
+            System.out.println("2 - Transformar Potencia.");
+            System.out.println("3 - Transformar Temperatura.");
+            System.out.println("0 - Saír.");
+
+            opc = leer.nextInt();
+            int opc2 = 0;
+            double distancia, temperatura, potencia;
+
+            if (opc > 0 && opc <= 3) {
+                do {
+                    System.out.println("Ingrese la opción que desea:");
+
+                    if (opc == 1) {
+                        System.out.println("1 - Kilómetros a Millas.");
+                        System.out.println("2 - Millas a Kilómetros.");
+                        System.out.println("3 - Millas a Pulgadas.");
+                        System.out.println("4 - Pulgadas a Millas.");
+                        System.out.println("0 - Volver al menú.");
+                    } else if (opc == 2) {
+                        System.out.println("1 - KW a CV.");
+                        System.out.println("2 - CV a KW.");
+                        System.out.println("3 - KW a Ft/Lb.");
+                        System.out.println("4 - Ft/Lb a KW.");
+                        System.out.println("0 - Volver al menú.");
+                    } else {
+                        System.out.println("1 - Celsius a Fahrenheit.");
+                        System.out.println("2 - Fahrenheit a Celsius.");
+                        System.out.println("3 - Celsius a Kelvin.");
+                        System.out.println("4 - Kelvin a Celsius.");
+                        System.out.println("0 - Volver al menú.");
+                    }
+
+                    opc2 = leer.nextInt();
+                    switch (opc2) {
+                        case 1:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Kilómetros que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+                                double resul;
+                                Luis.KilometrosMillas(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad en KW que quiera convertir a CV:");
+                                potencia = leer.nextDouble();
+                                Pablo.ConversionKWaCV(potencia);
+                            } else {
+                                System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Fahrenheit:");
+                                temperatura = leer.nextDouble();
+                                Ivan.CelsiusaFahrenheit(temperatura);
+                            }
+                            break;
+
+                        case 2:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Millas que quiera convertir a Kilómetros:");
+                                distancia = leer.nextDouble();
+                                Luis.MillasKilometros(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad en CV que quiera convertir a KW:");
+                                potencia = leer.nextDouble();
+                                Pablo.ConversionCVaKW(potencia);
+                            } else {
+                                System.out.println("Introduzca la cantidad en Fahrenheit que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                Ivan.FahrenheitaCelsius(temperatura);
+                            }
+                            break;
+
+                        case 3:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Millas que quiera convertir a Pulgadas:");
+                                distancia = leer.nextDouble();
+                                Luis.MillasPulgadas(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad en KW que quiera convertir a Ft/Lb:");
+                                potencia = leer.nextDouble();
+
+                                Pablo.ConversionKWaFTLB(potencia);
+                            } else {
+                                System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Kelvin:");
+                                temperatura = leer.nextDouble();
+
+                                Ivan.CelsiusaKelvin(temperatura);
+                            }
+                            break;
+
+                        case 4:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+
+                                Luis.PulgadasMillas(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad en Ft/Lb que quiera convertir a KW:");
+                                potencia = leer.nextDouble();
+
+                                Pablo.ConversionFTLBaKW(potencia);
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                Ivan.KelvinaCeslsius(temperatura);
+                            }
+                            break;
+                        case 0:
+                            System.out.println("Volver al menú");
+                            break;
+                    }
+                } while (opc2 != 0);
+            } else if (opc == 0) {
+                System.out.println("Has salido del programa");
+            } else {
+                System.out.println("Pon un número correcto");
+            };
+
+        } while (opc != 0);
     }
-
 }
