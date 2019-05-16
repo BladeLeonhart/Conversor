@@ -1,42 +1,55 @@
-
 package conversor;
 
+/**
+ *
+ * @author DAM117
+ */
 public class Lonxitude {
-    
-    private double Km;
-    private double Millas;
-    private double Pulgadas;
 
+    /**
+     *
+     */
     public Lonxitude() {
     }
-    
-    
-    public Double KilometrosMillas(double Km){
+
+    /**
+     *
+     * @param Km
+     */
+    public void KilometrosMillas(double Km) {
         double Millas;
         Millas = Km * 0.621;
-        return Millas;
+        System.out.println(Km + " Son " + Millas);
     }
-    
-    public Double MillasKilometros(double Millas){
+
+    /**
+     *
+     * @param Millas
+     */
+    public void MillasKilometros(double Millas) {
         double Km;
         Km = Millas * 1.61;
-        return Km;  
+        System.out.println(Millas + " Son " + Km);
     }
-    
-    public Double MillasPulgadas(double Millas){
+
+    /**
+     *
+     * @param Millas
+     */
+    public void MillasPulgadas(double Millas) {
         double Pulgadas;
         Pulgadas = Millas * 63360;
-        return Pulgadas;    
+        System.out.println(Millas + " Son " + Pulgadas);
     }
-    
-    public Double PulgadasMillas(double Pulgadas){
+
+    /**
+     *
+     * @param Pulgadas
+     */
+    public void PulgadasMillas(double Pulgadas) {
         double Millas;
         Millas = Pulgadas * 0.00001578;
-        return Millas; 
+        System.out.println(Pulgadas + " Son " + Millas);
     }
-    
- 
-    
+
 }
-
-
