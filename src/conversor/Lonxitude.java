@@ -2,7 +2,7 @@ package conversor;
 
 /**
  *
- * @author DAM117
+ * @author DAM105
  */
 
 public class Lonxitude {

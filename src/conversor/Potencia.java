@@ -2,7 +2,7 @@ package conversor;
 
 /**
  *
- * @author DAM117
+ * @author DAM125
  */
 public class Potencia {
 
