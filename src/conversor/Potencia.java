@@ -25,7 +25,7 @@ public class Potencia {
      * @param KW
      */
     public void ConvesionVaKW(double V) {
-        System.out.println("El resultado es" + V / 1000);
+        System.out.println("El resultado es " + V / 1000);
     }
 
     public void ConversionKWaCV(double KW) {

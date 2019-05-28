@@ -8,52 +8,10 @@ import java.util.Scanner;
  */
 public class Temperatura {
 
-    /**
-     *
-     */
-    public Temperatura() {
-    }
-
-    Scanner read = new Scanner(System.in);
-
-    /**
-     *
-     * @param Celsius
-     */
-    public void CelsiusaFahrenheit(double Celsius) {
-        double resultado;
-        resultado = (Celsius * 9 / 5) + 32;
-        System.out.println(Celsius + " ceslius son: " + resultado + " fahrenheit");
-    }
-
-    /**
-     *
-     * @param Faren
-     */
-    public void FahrenheitaCelsius(double Faren) {
-        double resultado;
-        resultado = (Faren - 32) * 5 / 9;
-        System.out.println(Faren + " fahrenheit son: " + resultado + " ceslius");
-
-    }
-
-    /**
-     *
-     * @param ndCelsius
-     */
-    public void CelsiusaKelvin(double ndCelsius) {
-        double resultado;
-        resultado = ndCelsius + 273.15;
-        System.out.println(ndCelsius + " celsius son: " + resultado + " kelvin");
-    }
-
-    /**
-     *
-     * @param Kelvin
-     */
-    public void KelvinaCeslsius(double Kelvin) {
-        double resultado;
-        resultado = Kelvin - 273.15;
-        System.out.println(Kelvin + " kelvin son: " + resultado + " celsius");
+    public double ConversorTemperatura(double temperatura, int var1, int var2) {
+        double[] conversor1 = {1, ((5) - 32) / 9, (1) + 273.15, ((5) - 491.67) / 9, ((1) + 100) / 1.500, 0.33000, (5) / 4, ((21) / 40) + 7.5};
+        double[] conversor2 = {1, ((9) + 32) / 5, (1) - 273.15, ((9) + 491.67) / 5, (((1) - 100) * 3) / 2, (1) / 0.33000, (4) / 5, ((1) - 7.5) / 0.52500};
+        temperatura = ((temperatura * conversor1[var1]) * conversor2[var2]);
+        return temperatura;
     }
 }
