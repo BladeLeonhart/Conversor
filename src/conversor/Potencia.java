@@ -16,14 +16,20 @@ public class Potencia {
     private double CV;
     private double FtLB;
 
-    /**
-     *
-     * @param KW
-     */
+    public void ConvesionVaKW(double V) {
+        System.out.println("El resultado es" + V / 1000);
+    }
+
     public void ConversionKWaCV(double KW) {
         double CV;
         CV = KW * 1.36;
-        System.out.println(KW + "KW a CV son " + CV);
+        System.out.println(KW + " el resultado es " + CV);
+    }
+
+    public void ConversionWaCV(double V) {
+        double CV;
+        CV = V / 745.7;
+        System.out.println(KW + " el resultado es " + CV);
     }
 
     /**
@@ -32,8 +38,8 @@ public class Potencia {
      */
     public void ConversionCVaKW(double CV) {
         double KW;
-        KW = CV * 0.736;
-        System.out.println(CV + "CV a KW son " + KW); 
+        KW = CV * 0.745;
+        System.out.println(" el resultado es " + KW);
     }
 
     /**
@@ -43,7 +49,7 @@ public class Potencia {
     public void ConversionKWaFTLB(double KW) {
         double FTLB;
         FTLB = KW * 737.562149;
-        System.out.println(KW + "KW a FTLB son " + FTLB); 
+        System.out.println(KW + " el resultado es " + FTLB);
     }
 
     /**
@@ -53,7 +59,24 @@ public class Potencia {
     public void ConversionFTLBaKW(double FTLB) {
         double KW;
         KW = FTLB / 737.562149;
-        System.out.println(FTLB + "FTLB a KW son " + KW);
+        System.out.println(FTLB + " el resultado es " + KW);
     }
 
+    public void ConversionWaMW(double W) {
+        double MW;
+        MW = W * 1000;
+        System.out.println(W + " el resultado es " + MW);
+    }
+
+    public void ConversionWaCF(double W) {
+        double CF;
+        CF = W / 745.7 ;
+        System.out.println(KW + " el resultado es " + CF);
+    }
+
+    public void ConversionWaPE(double W) {
+        double CF;
+        CF = W / 1.36;
+        System.out.println(KW + " el resultado es " + CF);
+    }
 }
