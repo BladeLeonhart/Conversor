@@ -57,11 +57,15 @@ public class Conversor {
                         System.out.println("6 - Pé.");
                         System.out.println("0 - Saír.");
                     } else {
-                        System.out.println("1 - Celsius a Fahrenheit.");
-                        System.out.println("2 - Fahrenheit a Celsius.");
-                        System.out.println("3 - Celsius a Kelvin.");
-                        System.out.println("4 - Kelvin a Celsius.");
-                        System.out.println("0 - Volver al menú.");
+                        System.out.println("1 - Celsius");
+                        System.out.println("2 - Fahrenheit");
+                        System.out.println("3 - Kelvin");
+                        System.out.println("4 - Rankine");
+                        System.out.println("5 - Delisle");
+                        System.out.println("6 - Newton");
+                        System.out.println("7 - Reámur");
+                        System.out.println("8 - Romer");
+                        System.out.println("0 - Saír");
                     }
 
                     opc2 = leer.nextInt();
@@ -116,7 +120,7 @@ public class Conversor {
                             } else {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Fahrenheit:");
                                 temperatura = leer.nextDouble();
-                                Ivan.CelsiusaFahrenheit(temperatura);
+                                //Ivan.CelsiusaFahrenheit(temperatura);
                             }
                             break;
 
@@ -171,7 +175,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Fahrenheit que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                Ivan.FahrenheitaCelsius(temperatura);
+                               // Ivan.FahrenheitaCelsius(temperatura);
                             }
                             break;
 
@@ -226,7 +230,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Kelvin:");
                                 temperatura = leer.nextDouble();
 
-                                Ivan.CelsiusaKelvin(temperatura);
+                                //Ivan.CelsiusaKelvin(temperatura);
                             }
                             break;
 
@@ -282,7 +286,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                Ivan.KelvinaCeslsius(temperatura);
+                               // Ivan.KelvinaCeslsius(temperatura);
                             }
                             break;
 
@@ -338,7 +342,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                Ivan.KelvinaCeslsius(temperatura);
+                                //Ivan.KelvinaCeslsius(temperatura);
                             }
                             break;
 
@@ -359,7 +363,7 @@ public class Conversor {
                                 System.out.println("5 - MW.");
                                 System.out.println("6 - Pé.");
                                 System.out.println("9 - Saír.");
-                                potencia = potencia *1.36;
+                                potencia = potencia * 1.36;
                                 int opc3 = leer.nextInt();
                                 switch (opc3) {
                                     case 1:
@@ -394,7 +398,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                Ivan.KelvinaCeslsius(temperatura);
+                                //Ivan.KelvinaCeslsius(temperatura);
                             }
                             break;
                         case 0:
