@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author DAM117
+ * @author Luis, Pablo, Iván(ausente)
  *
  */
 public class Conversor {
