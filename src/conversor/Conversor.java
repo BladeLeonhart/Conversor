@@ -43,10 +43,15 @@ public class Conversor {
                     System.out.println("Ingrese la opción que desea:");
 
                     if (opc == 1) {
-                        System.out.println("1 - Kilómetros a Millas.");
-                        System.out.println("2 - Millas a Kilómetros.");
-                        System.out.println("3 - Millas a Pulgadas.");
-                        System.out.println("4 - Pulgadas a Millas.");
+                        System.out.println("1 - Kms");
+                        System.out.println("2 - Metros.");
+                        System.out.println("3 - Cms.");
+                        System.out.println("4 - Pulgadas.");
+                        System.out.println("5 - Yardas.");
+                        System.out.println("6 - Pés.");
+                        System.out.println("7 - Millas.");
+                        System.out.println("8 - Millas náuticas.");
+                        System.out.println("9 - Saír.");
                         System.out.println("0 - Volver al menú.");
                     } else if (opc == 2) {
                         System.out.println("1 - Vatio.");
@@ -75,7 +80,19 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kilómetros que quiera convertir a Millas:");
                                 distancia = leer.nextDouble();
                                 double resul;
-                                Luis.KilometrosMillas(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -120,7 +137,7 @@ public class Conversor {
                             } else {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Fahrenheit:");
                                 temperatura = leer.nextDouble();
-                                //Ivan.CelsiusaFahrenheit(temperatura);
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
 
@@ -128,7 +145,19 @@ public class Conversor {
                             if (opc == 1) {
                                 System.out.println("Introduzca la cantidad en Millas que quiera convertir a Kilómetros:");
                                 distancia = leer.nextDouble();
-                                Luis.MillasKilometros(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -175,7 +204,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Fahrenheit que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                               // Ivan.FahrenheitaCelsius(temperatura);
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
 
@@ -183,7 +212,19 @@ public class Conversor {
                             if (opc == 1) {
                                 System.out.println("Introduzca la cantidad en Millas que quiera convertir a Pulgadas:");
                                 distancia = leer.nextDouble();
-                                Luis.MillasPulgadas(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -230,7 +271,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Kelvin:");
                                 temperatura = leer.nextDouble();
 
-                                //Ivan.CelsiusaKelvin(temperatura);
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
 
@@ -239,7 +280,19 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
                                 distancia = leer.nextDouble();
 
-                                Luis.PulgadasMillas(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia,opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -286,7 +339,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                               // Ivan.KelvinaCeslsius(temperatura);
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
 
@@ -295,7 +348,19 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
                                 distancia = leer.nextDouble();
 
-                                Luis.PulgadasMillas(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -342,7 +407,7 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                //Ivan.KelvinaCeslsius(temperatura);
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
 
@@ -351,7 +416,19 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
                                 distancia = leer.nextDouble();
 
-                                Luis.PulgadasMillas(distancia);
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia,opc2, opc3));
                             } else if (opc == 2) {
                                 System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
@@ -398,7 +475,80 @@ public class Conversor {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
 
-                                //Ivan.KelvinaCeslsius(temperatura);
+                                   System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
+
+                            }
+                            break;
+                        case 7:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
+                            }
+                            break;
+                        case 8:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
+                            }
+                            break;
+                        case 9:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+                                System.out.println("1 - Kms");
+                                System.out.println("2 - Metros.");
+                                System.out.println("3 - Cms.");
+                                System.out.println("4 - Pulgadas.");
+                                System.out.println("5 - Yardas.");
+                                System.out.println("6 - Pés.");
+                                System.out.println("7 - Millas.");
+                                System.out.println("8 - Millas náuticas.");
+                                System.out.println("9 - Saír.");
+                                System.out.println("0 - Volver al menú.");
+                                int opc3;
+                                opc3 = leer.nextInt();
+                                System.out.println("El resultado és: " + Luis.ConversorUnidades(distancia, opc2, opc3));
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                System.out.println("El resultado es "+Ivan.ConversorTemperatura(temperatura, opc, opc2));
                             }
                             break;
                         case 0:
