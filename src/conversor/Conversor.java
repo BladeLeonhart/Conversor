@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  *
  * @author DAM117
- * 
+ *
  */
 public class Conversor {
 
