@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  *
  * @author DAM117
- * 
+ *
  */
 public class Conversor {
 
@@ -20,6 +20,8 @@ public class Conversor {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int opc = 10;
+        double KW = 0;
+        double CV, V, CF, MW, Pe;
         Lonxitude Luis = new Lonxitude();
         Potencia Pablo = new Potencia();
         Temperatura Ivan = new Temperatura();
@@ -47,11 +49,13 @@ public class Conversor {
                         System.out.println("4 - Pulgadas a Millas.");
                         System.out.println("0 - Volver al menú.");
                     } else if (opc == 2) {
-                        System.out.println("1 - KW a CV.");
-                        System.out.println("2 - CV a KW.");
-                        System.out.println("3 - KW a Ft/Lb.");
-                        System.out.println("4 - Ft/Lb a KW.");
-                        System.out.println("0 - Volver al menú.");
+                        System.out.println("1 - Vatio.");
+                        System.out.println("2 - KW.");
+                        System.out.println("3 - CV.");
+                        System.out.println("4 - CF.");
+                        System.out.println("5 - MW.");
+                        System.out.println("6 - Pé.");
+                        System.out.println("0 - Saír.");
                     } else {
                         System.out.println("1 - Celsius a Fahrenheit.");
                         System.out.println("2 - Fahrenheit a Celsius.");
@@ -69,9 +73,46 @@ public class Conversor {
                                 double resul;
                                 Luis.KilometrosMillas(distancia);
                             } else if (opc == 2) {
-                                System.out.println("Introduzca la cantidad en KW que quiera convertir a CV:");
+                                System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
-                                Pablo.ConversionKWaCV(potencia);
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido la misma unidad");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        Pablo.ConvesionVaKW(potencia);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionCVaKW(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
                             } else {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Fahrenheit:");
                                 temperatura = leer.nextDouble();
@@ -85,9 +126,47 @@ public class Conversor {
                                 distancia = leer.nextDouble();
                                 Luis.MillasKilometros(distancia);
                             } else if (opc == 2) {
-                                System.out.println("Introduzca la cantidad en CV que quiera convertir a KW:");
+                                System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
-                                Pablo.ConversionCVaKW(potencia);
+                                potencia = potencia * 1000;
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido Vatios");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        System.out.println("El resultado es " + potencia / 1000);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionCVaKW(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
                             } else {
                                 System.out.println("Introduzca la cantidad en Fahrenheit que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
@@ -102,10 +181,47 @@ public class Conversor {
                                 distancia = leer.nextDouble();
                                 Luis.MillasPulgadas(distancia);
                             } else if (opc == 2) {
-                                System.out.println("Introduzca la cantidad en KW que quiera convertir a Ft/Lb:");
+                                System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
-
-                                Pablo.ConversionKWaFTLB(potencia);
+                                potencia = potencia * 745.7;
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido la misma unidad");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        System.out.println("El resultado es " + potencia * 1000);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionWaCV(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
                             } else {
                                 System.out.println("Introduzca la cantidad en Celsius que quiera convertir a Kelvin:");
                                 temperatura = leer.nextDouble();
@@ -121,10 +237,159 @@ public class Conversor {
 
                                 Luis.PulgadasMillas(distancia);
                             } else if (opc == 2) {
-                                System.out.println("Introduzca la cantidad en Ft/Lb que quiera convertir a KW:");
+                                System.out.println("Introduzca la cantidad a convertir");
                                 potencia = leer.nextDouble();
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                potencia = potencia * 745.7;
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido la misma unidad");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        System.out.println("El resultado es " + potencia * 1000);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionCVaKW(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
 
-                                Pablo.ConversionFTLBaKW(potencia);
+                                Ivan.KelvinaCeslsius(temperatura);
+                            }
+                            break;
+
+                        case 5:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+
+                                Luis.PulgadasMillas(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad a convertir");
+                                potencia = leer.nextDouble();
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                potencia = potencia / 1000;
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido la misma unidad");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        System.out.println("El resultado es " + potencia * 1000);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionCVaKW(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
+                            } else {
+                                System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
+                                temperatura = leer.nextDouble();
+
+                                Ivan.KelvinaCeslsius(temperatura);
+                            }
+                            break;
+
+                        case 6:
+                            if (opc == 1) {
+                                System.out.println("Introduzca la cantidad en Pulgadas que quiera convertir a Millas:");
+                                distancia = leer.nextDouble();
+
+                                Luis.PulgadasMillas(distancia);
+                            } else if (opc == 2) {
+                                System.out.println("Introduzca la cantidad a convertir");
+                                potencia = leer.nextDouble();
+                                System.out.println("Escribe la opcion correcta");
+                                System.out.println("1 - Vatio.");
+                                System.out.println("2 - KW.");
+                                System.out.println("3 - CV.");
+                                System.out.println("4 - CF.");
+                                System.out.println("5 - MW.");
+                                System.out.println("6 - Pé.");
+                                System.out.println("9 - Saír.");
+                                potencia = potencia *1.36;
+                                int opc3 = leer.nextInt();
+                                switch (opc3) {
+                                    case 1:
+                                        System.out.println("Has elegido la misma unidad");
+                                        System.out.println("El resultado es " + potencia);
+                                        break;
+                                    case 2:
+                                        System.out.println("Has elegido KW");
+                                        System.out.println("El resultado es " + potencia * 1000);
+                                        break;
+                                    case 3:
+                                        System.out.println("Has elegido CV");
+                                        Pablo.ConversionCVaKW(potencia);
+                                        break;
+                                    case 4:
+                                        System.out.println("Has elegido CF");
+                                        Pablo.ConversionWaCF(potencia);
+                                        break;
+                                    case 5:
+                                        System.out.println("Has elegido MW");
+                                        Pablo.ConversionWaMW(potencia);
+                                        break;
+                                    case 6:
+                                        System.out.println("Has elegido PE");
+                                        Pablo.ConversionWaPE(potencia);
+                                        break;
+                                    case 9:
+                                        System.out.println("volver al menú");
+                                        break;
+                                }
                             } else {
                                 System.out.println("Introduzca la cantidad en Kelvin que quiera convertir a Celsius:");
                                 temperatura = leer.nextDouble();
